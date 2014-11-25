@@ -12,7 +12,7 @@ class CheckinsController < ApplicationController
   end
 
   def update
-    @work.checkout!
+    @work.checkout! if @work
     #render partial: 'works/work', locals: {work: @work}
     #render json: {id: @work.id, checkout: format_time(@work.checkout), checkin: format_time(@work.checkin), hours: format_hours(@work.hours)}
     render json: @work

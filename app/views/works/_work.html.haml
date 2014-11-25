@@ -1,5 +1,6 @@
 .row.work{'data-id' => "#{work.id}"}
   .col-sm-1.id= work.id
-  .col-sm-3.checkin= format_time work.checkin
-  .col-sm-3.checkout= format_time work.checkout
-  .col-sm-3.hours= format_hours work.hours
+  .col-sm-1.id= work.job
+  .col-sm-2.checkin= format_time work.checkin
+  .col-sm-2.checkout= format_time work.checkout
+  .col-sm-2.hours= format_hours work.hours
