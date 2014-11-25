@@ -1,5 +1,14 @@
 source 'https://rubygems.org'
 
+group :production do
+  gem 'rails_12factor'
+  gem "activerecord-postgresql-adapter" 
+  gem "pg"
+  #gem 'newrelic_rpm'
+  #ruby "2.0.0"
+end
+
+
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.1.7'
