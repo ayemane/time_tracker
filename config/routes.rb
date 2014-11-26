@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
   resources :works
   resources :checkins, only: [:create, :update]
-  root 'work#index'
+  root 'works#index'
 end
