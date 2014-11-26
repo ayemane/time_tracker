@@ -31,4 +31,8 @@ class Work < ActiveRecord::Base
     (co - ci)/3600
   end
   
+  def week_number
+    checkin.to_date.cweek-1 if checkin
+  end
+
 end
