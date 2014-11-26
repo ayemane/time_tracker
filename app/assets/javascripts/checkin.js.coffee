@@ -27,6 +27,7 @@ $ ->
        work = data['work']
        row = $('#works div[data-id='+work["id"]+']')
        row.find('.id').html(work['id'])
+       row.find('.job').html(work['job'])
        row.find('.checkin').html(work['checkin'])
        row.find('.checkout').html(work['checkout'])
        row.find('.hours').html(work['hours'])

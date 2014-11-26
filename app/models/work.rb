@@ -30,4 +30,5 @@ class Work < ActiveRecord::Base
     co = Time.parse (checkout || DateTime.now).to_s
     (co - ci)/3600
   end
+  
 end

@@ -15,5 +15,9 @@
       .col-sm-2.hours hours
   .col-sm-12.col-sm-offset-1
     #works
-      - @works.each do |work|
-        = render work
+      - @works.each do |week, works|
+        .row
+          .col-sm-10.week
+            %h3= week
+        - works.each do |work|
+          = render work

@@ -12,9 +12,14 @@ class CheckinsController < ApplicationController
   end
 
   def update
-    @work.checkout! if @work
-    #render partial: 'works/work', locals: {work: @work}
-    #render json: {id: @work.id, checkout: format_time(@work.checkout), checkin: format_time(@work.checkin), hours: format_hours(@work.hours)}
-    render json: @work
+    if @work
+      @work.checkout! 
+      render json: @work
+      #render partial: 'works/work', locals: {work: @work}
+      #render json: {id: @work.id, checkout: format_time(@work.checkout), checkin: format_time(@work.checkin), hours: format_hours(@work.hours)}
+    else
+      render json: {status: 'No active work to clock out from'}
+    end
+    
   end
 end
